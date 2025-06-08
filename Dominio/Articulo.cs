@@ -16,6 +16,13 @@ namespace Dominio
         public Marca Marca {  get; set; }
         public Categoria Categoria { get; set; }
         public List<Imagen> Imagenes { get; set; }
+        public string ImagenPrincipal
+        {
+            get
+            {
+                return (Imagenes is null || Imagenes.Count <= 0) ? "./img/img-premio.jpg" : Imagenes[0].Url;
+            }
+        }
 
     }
 }
