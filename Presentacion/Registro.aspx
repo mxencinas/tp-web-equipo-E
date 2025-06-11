@@ -1,15 +1,15 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Registro.aspx.cs" Inherits="Presentacion.Registro" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
-    <p><%:Session["codigoVoucher"] %></p>
-    <p><%:Session["idArticulo"] %></p>
+    <%--<p><%:Session["codigoVoucher"] %></p>
+    <p><%:Session["idArticulo"] %></p>--%>
     <div class="text-center">
         <h1>Ingresá tus datos</h1>
     </div>
     <div class="col">
         <asp:Label ID="lblDNI" runat="server" Text="DNI"></asp:Label>
         <asp:TextBox ID="txtDni" TextMode="SingleLine" MaxLength="8"  CssClass="form-control"  runat="server"></asp:TextBox>
-        
+        <asp:Label ID="lblRegistro"  runat="server" Text=""></asp:Label>
     </div>
 
     <div>
@@ -53,6 +53,6 @@
     <asp:Label ID="lblTerminos" runat="server" Text="Acepto los términos y condiciones"></asp:Label>
 
     <div class="mb">
-        <asp:Button ID="btnParticipar" CssClass="btn btn-primary" runat="server" Text="PARTICIPAR!" />
+        <asp:Button ID="btnParticipar" CssClass="btn btn-primary" OnClick="btnParticipar_Click" runat="server" Text="PARTICIPAR!" />
     </div>
 </asp:Content>
